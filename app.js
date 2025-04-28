@@ -1,4 +1,5 @@
-if(process.envNODE_ENV != "production"){
+function start(){
+    if(process.envNODE_ENV != "production"){
     require("dotenv").config();
 }
 
@@ -120,3 +121,5 @@ app.use((err,req,res,next)=>{
 app.listen(8080,()=>{
     console.log("listening to port 8080");
 });
+}
+module.exports={start};
