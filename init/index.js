@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
+const app=require("../app.js");
 
 main().then(()=>{
     console.log("connected to DB");
@@ -19,3 +20,4 @@ const initDB = async ()=>{
 };
 
 initDB();
+app.start();
